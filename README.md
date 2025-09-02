@@ -103,23 +103,23 @@ const textInput = document.getElementById("textInput");
 + // On page load, reset to base path and clear input
 window.addEventListener("DOMContentLoaded", () => {
 -   textInput.value = "";
--   const path = '/' + encodeURIComponent(textInput.value);
+-   const path = "/" + encodeURIComponent(textInput.value);
 -   history.replaceState(null, null, path);
 +   const base = getBasePath();
 +   history.replaceState(null, null, base);
-+   textInput.value = '';
++   textInput.value = "";
 });
 
 // Update the URL path whenever the input changes
 textInput.addEventListener("input", () => {
--   const path = '/' + encodeURIComponent(textInput.value);
+-   const path = "/" + encodeURIComponent(textInput.value);
 -   history.replaceState(null, null, path);
 +   const base = getBasePath();
 +   if(!(textInput.value) || textInput.value == '' || textInput.value === '') {
 +     history.replaceState(null, null, base);
 +   }
 +   else {
-+     const path = base + '/' + encodeURIComponent(textInput.value);
++     const path = base + "/" + encodeURIComponent(textInput.value);
 +     history.replaceState(null, null, path);
 +   }
 });
