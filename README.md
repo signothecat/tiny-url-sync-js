@@ -21,7 +21,7 @@ Whenever you type into the text field, the browser’s URL updates instantly wit
 Clone the repo:
 
 ```zsh
-git clone https://github.com/your-username/tiny-url-sync-js.git
+git clone https://github.com/signothecat/tiny-url-sync-js.git
 cd tiny-url-sync-js
 ```
 
