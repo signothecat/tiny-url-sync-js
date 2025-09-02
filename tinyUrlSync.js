@@ -2,7 +2,7 @@ const textInput = document.getElementById("textInput");
 
 // Helper: get the base path (project root on GitHub Pages)
 function getBasePath() {
-  // remove everything after the last slash (e.g. /tiny-url-sync-js/ or /tiny-url-sync-js/index.html)
+  // remove everything after the last slash
   return window.location.pathname.replace(/[^/]*$/, '');
 }
 
