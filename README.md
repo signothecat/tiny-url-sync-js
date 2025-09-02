@@ -39,6 +39,27 @@ npx serve -s . -l 8000
 Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
 If you don't use `-s` (SPA fallback), put 404.html to redirect.
+(Refer branch 'gh-pages')
+
+**404.html**
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
+    <meta name="robots" content="noindex">
+    <script>
+      var base = '/tiny-url-sync-js';
+      // Always redirect to the base
+      location.replace(base);
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to the app…</p>
+  </body>
+</html>
+```
 
 ## Code Overview
 
@@ -55,14 +76,52 @@ const textInput = document.getElementById("textInput");
 
 // On page load, reset URL and input to initial state
 window.addEventListener("DOMContentLoaded", () => {
-  history.replaceState(null, null, "/");
   textInput.value = "";
+  const path = "/" + encodeURIComponent(textInput.value);
+  history.replaceState(null, null, path);
 });
 
 // Update the URL path whenever the input changes
 textInput.addEventListener("input", () => {
   const path = "/" + encodeURIComponent(textInput.value);
   history.replaceState(null, null, path);
+});
+```
+
+## Demo JS diff overview
+
+To support GitHub Pages specifications, the following diffs in JS apply:
+
+**tinyUrlSync.js**
+```diff
+const textInput = document.getElementById("textInput");
+
++ // Helper: get the base path (project root on GitHub Pages)
++ const getBasePath = () => '/tiny-url-sync-js';
+
+- // On page load, reset URL and input to initial state
++ // On page load, reset to base path and clear input
+window.addEventListener("DOMContentLoaded", () => {
+-   textInput.value = "";
+-   const path = "/" + encodeURIComponent(textInput.value);
+-   history.replaceState(null, null, path);
++   const base = getBasePath();
++   history.replaceState(null, null, base);
++   textInput.value = "";
+});
+
+// Update the URL path whenever the input changes
+textInput.addEventListener("input", () => {
+-   const path = "/" + encodeURIComponent(textInput.value);
+-   history.replaceState(null, null, path);
++   const base = getBasePath();
++   if(!(textInput.value) || textInput.value == '' || textInput.value === '') {
++     history.replaceState(null, null, base);
++   }
++   else {
++     const path = base + '/' + encodeURIComponent(textInput.value);
++     history.replaceState(null, null, path);
++   }
 });
 ```
 
