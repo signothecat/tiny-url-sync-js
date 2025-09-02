@@ -27,22 +27,18 @@ cd tiny-url-sync-js
 
 ### Run with a local server
 
-⚠️ Opening `app.html` directly with `file://` may not work as expected.
-Please run a local development server instead, for example:
+⚠️ Opening `index.html` directly with `file://` may not work as expected.
+Please run a local development server instead:
 
-Using npx (if you have Node.js):
-
-```zsh
-npx serve . -l 8000
-```
-
-Using Python (built-in HTTP server):
+Using npx:
 
 ```zsh
-python3 -m http.server 8000
+npx serve -s . -l 8000
 ```
 
 Then open [http://localhost:8000](http://localhost:8000) in your browser.
+
+If you don't use `-s` (SPA fallback), put 404.html to redirect.
 
 ## Code Overview
 
