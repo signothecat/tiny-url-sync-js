@@ -1,7 +1,7 @@
 const textInput = document.getElementById("textInput");
 
 // Helper: get the base path (project root on GitHub Pages)
-const getBasePath = () => '/tiny-url-sync-js';
+const getBasePath = () => '/tiny-url-sync-js/';
 
 // On page load, reset to base path and clear input
 window.addEventListener("DOMContentLoaded", () => {
@@ -12,7 +12,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Update the URL path whenever the input changes
 textInput.addEventListener("input", () => {
-  const base = getBasePath();
   const path = "/" + encodeURIComponent(textInput.value);
   history.replaceState(null, null, path);
 });
