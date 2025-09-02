@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
 // Update the URL path whenever the input changes
 textInput.addEventListener("input", () => {
   const base = getBasePath();
-  if(!(textInput.value)) {
+  if(!(textInput.value) || textInput.value == '' || textInput.value === '') {
     history.replaceState(null, null, base);
   }
   else {
