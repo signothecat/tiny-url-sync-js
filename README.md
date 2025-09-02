@@ -46,14 +46,14 @@ Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
 ## Code Overview
 
-**app.html**
+**index.html**
 ```html
 <label for="textInput">Add path:</label>
 <input type="text" id="textInput" />
-<script src="app.js"></script>
+<script src="tinyUrlSync.js"></script>
 ```
 
-**app.js**
+**tinyUrlSync.js**
 ```js
 const textInput = document.getElementById("textInput");
 
