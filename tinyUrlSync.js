@@ -5,9 +5,10 @@ const getBasePath = () => '/tiny-url-sync-js';
 
 // On page load, reset to base path and clear input
 window.addEventListener("DOMContentLoaded", () => {
-  const base = getBasePath();
-  history.replaceState(null, null, base);
   textInput.value = "";
+  const base = getBasePath();
+  const path = base + encodeURIComponent(textInput.value);
+  history.replaceState(null, null, path);
 });
 
 // Update the URL path whenever the input changes
