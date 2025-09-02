@@ -6,7 +6,7 @@ Whenever you type into the text field, the browser’s URL updates instantly wit
 
 ## Demo
 
-👉 Try it on [GitHub Pages](https://signothecat.github.io/tiny-url-sync-js/)
+👉 Try it on [GitHub Pages](https://signothecat.github.io/tiny-url-sync-js/tinyUrlSync.js)
 
 ![demo](./screenshot.gif)
 
