@@ -8,7 +8,7 @@ Whenever you type into the text field, the browser’s URL updates instantly wit
 
 👉 Try it on [GitHub Pages](https://signothecat.github.io/tiny-url-sync-js)
 
-![demo](./screenshot.gif)
+<img src="https://github.com/user-attachments/assets/35b57d76-3d05-465d-9c2f-af5abcaacdfe" width="400" alt="demo">
 
 ## Features
 
