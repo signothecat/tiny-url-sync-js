@@ -1,4 +1,4 @@
-# tiny-url-sync
+# tiny-url-sync-js
 
 A minimal example showing how to **synchronize an input field with the browser URL path** using plain HTML and JavaScript.
 
@@ -6,7 +6,7 @@ Whenever you type into the text field, the browser’s URL updates instantly wit
 
 ## Demo
 
-👉 Try it on [GitHub Pages](https://signothecat.github.io/tiny-url-sync/)
+👉 Try it on [GitHub Pages](https://signothecat.github.io/tiny-url-sync-js/)
 
 ![demo](./screenshot.gif)
 
@@ -21,8 +21,8 @@ Whenever you type into the text field, the browser’s URL updates instantly wit
 Clone the repo:
 
 ```zsh
-git clone https://github.com/your-username/tiny-url-sync.git
-cd tiny-url-sync
+git clone https://github.com/your-username/tiny-url-sync-js.git
+cd tiny-url-sync-js
 ```
 
 ### Run with a local server
