@@ -90,7 +90,7 @@ textInput.addEventListener("input", () => {
 
 ## Demo JS diff overview
 
-To support GitHub Pages specifications, the following diffs in JS apply:
+To support GitHub Pages specifications, the following diffs in JS apply (please refer branch 'gh-pages'):
 
 **tinyUrlSync.js**
 ```diff
@@ -103,16 +103,16 @@ const textInput = document.getElementById("textInput");
 + // On page load, reset to base path and clear input
 window.addEventListener("DOMContentLoaded", () => {
 -   textInput.value = "";
--   const path = "/" + encodeURIComponent(textInput.value);
+-   const path = '/' + encodeURIComponent(textInput.value);
 -   history.replaceState(null, null, path);
 +   const base = getBasePath();
 +   history.replaceState(null, null, base);
-+   textInput.value = "";
++   textInput.value = '';
 });
 
 // Update the URL path whenever the input changes
 textInput.addEventListener("input", () => {
--   const path = "/" + encodeURIComponent(textInput.value);
+-   const path = '/' + encodeURIComponent(textInput.value);
 -   history.replaceState(null, null, path);
 +   const base = getBasePath();
 +   if(!(textInput.value) || textInput.value == '' || textInput.value === '') {
