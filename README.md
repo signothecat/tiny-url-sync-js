@@ -18,17 +18,18 @@ Whenever you type into the text field, the browser’s URL updates instantly wit
 
 ## Getting Started
 
-Clone the repo:
+### Clone the repo:
 
 ```zsh
 git clone https://github.com/signothecat/tiny-url-sync-js.git
 cd tiny-url-sync-js
 ```
 
-### Run with a local server
+### Run with a local server:
 
 ⚠️ Opening `index.html` directly with `file://` may not work as expected.
-Please run a local development server instead:
+
+Please run a local development server instead.
 
 Using npx:
 
@@ -38,8 +39,7 @@ npx serve -s . -l 8000
 
 Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
-If you don't use `-s` (SPA fallback), put 404.html to redirect.
-(Refer branch 'gh-pages')
+Optional: If you don't use `-s` (SPA fallback), put 404.html to redirect (Refer branch 'gh-pages' for the details).
 
 **404.html**
 ```html
@@ -88,9 +88,9 @@ textInput.addEventListener("input", () => {
 });
 ```
 
-## Demo JS diff overview
+## Demo Page JS diff Overview
 
-To support GitHub Pages specifications, the following diffs in JS apply (please refer branch 'gh-pages'):
+In [demo](https://signothecat.github.io/tiny-url-sync-js), the following diffs in JS apply to support GitHub Pages specifications (Refer branch 'gh-pages' for the details).
 
 **tinyUrlSync.js**
 ```diff
