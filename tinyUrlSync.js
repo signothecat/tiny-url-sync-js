@@ -8,6 +8,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Update the URL path whenever the input changes
 textInput.addEventListener("input", () => {
-  const path = "/" + textInput.value;
+  const path = "/" + encodeURIComponent(textInput.value);
   history.replaceState(null, null, path);
 });
