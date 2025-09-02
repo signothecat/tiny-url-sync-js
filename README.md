@@ -4,25 +4,17 @@ A minimal example showing how to **synchronize an input field with the browser U
 
 Whenever you type into the text field, the browser’s URL updates instantly without reloading the page.
 
----
-
 ## Demo
 
 👉 Try it on [GitHub Pages](https://signothecat.github.io/tiny-url-sync/)
 
 ![demo](./screenshot.gif)
 
----
-
 ## Features
 
 - Zero dependencies – HTML + pure JavaScript
 - Live updates: URL changes as you type
 - Uses `history.replaceState` to avoid page reloads
-
----
-
-## Getting Started
 
 ## Getting Started
 
@@ -52,8 +44,6 @@ python3 -m http.server 8000
 
 Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
----
-
 ## Code Overview
 
 **app.html**
@@ -72,8 +62,6 @@ textInput.addEventListener("input", () => {
   history.replaceState(null, null, path);
 });
 ```
-
----
 
 ## License
 
