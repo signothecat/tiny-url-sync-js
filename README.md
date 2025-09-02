@@ -29,9 +29,7 @@ cd tiny-url-sync-js
 
 ⚠️ Opening `index.html` directly with `file://` may not work as expected.
 
-Please run a local development server instead.
-
-Using npx:
+Please run a local development server instead, using npx:
 
 ```zsh
 npx serve -s . -l 8000
@@ -39,7 +37,7 @@ npx serve -s . -l 8000
 
 Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
-Optional: If you don't use `-s` (SPA fallback), put 404.html to redirect (Refer branch 'gh-pages' for the details).
+(Optional) If you don't use `-s` (SPA fallback), put 404.html to redirect (Refer branch 'gh-pages' for the details).
 
 **404.html**
 ```html
